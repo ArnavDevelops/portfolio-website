@@ -1,0 +1,394 @@
+body,
+main {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 20, 20);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: bold;
+    margin: auto;
+    font-size: 19px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #2c2b2b;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #5f5c5c;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #676363;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 460px;
+    padding: 100px, 20vw;
+    align-items: center;
+}
+
+bottomsection {
+    position: relative;
+    display: flex;
+    min-height: 460px;
+    padding: 100px, 20vw;
+    align-items: center;
+}
+
+.blue {
+    background-color: rgb(84, 84, 180);
+}
+
+.pink {
+    background-color: rgb(217, 132, 146);
+    padding: 200px;
+}
+
+.yellow {
+    background-color: rgb(99, 99, 6);
+    padding: 200px;
+}
+
+.bottomwave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bottomwave svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 207px;
+}
+
+.bottomwave .shape-fill {
+    fill: rgb(21, 20, 20);
+}
+
+.anotherwave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.anotherwave svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 221px;
+    transform: rotateY(180deg);
+}
+
+.anotherwave .shape-fill {
+    fill: rgb(217, 132, 146);
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 221px;
+    transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+    fill: rgb(21, 20, 20);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 45px;
+    ;
+    text-shadow: 0px 5px 0px rgb(124, 115, 115);
+
+}
+
+
+work button {
+    display: inline-flex;
+    height: 200px;
+    padding: 0;
+    background: lightslategray;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+}
+
+work .button__icon {
+    img {
+        height: 200px;
+        width: 200px
+    }
+}
+
+work button:hover {
+    position: relative;
+    height: 260px;
+    width: 200px;
+    background-color: rgb(142, 130, 130);
+    transition: 1s;
+
+}
+
+work button:hover::after {
+    content: "I'm Dyce, the best management and moderation bot you could find for your server.";
+    color: rgb(255, 255, 255);
+    text-shadow: 50px;
+    position: absolute;
+    bottom: 0;
+    background: rgb(48, 114, 105);
+    border-radius: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 100px;
+    position: fixed;
+    background-image: linear-gradient(#4b477d, #0180fe);
+    z-index: 10;
+}
+
+nav .logo p {
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    color: white
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav li a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: gray;
+    transition: all 0.4s ease 0s;
+}
+
+footer {
+    background-image: linear-gradient(#0e7ac7, rgb(3, 7, 122));
+}
+
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: none;
+}
+
+.containerleft {
+    text-align: left;
+    justify-content: left;
+    position: relative;
+    font-size: 15p;
+    max-width: 500px;
+    background: none;
+}
+
+.containerleft h {
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: bold;
+    font-size: 30px;
+    flex-basis: 36%;
+    background: none;
+    color: white
+}
+
+.containerleft a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(141, 136, 100);
+    margin: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding-right: 20px;
+}
+
+.containerleft i {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: bold;
+    color: white;
+
+}
+
+.containerright {
+    border-radius: 5px;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 10%;
+    background: none;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 500px;
+    max-height: 550px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 12px;
+    border: 2px solid #676767;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;
+}
+
+textarea[id="subject"] {
+    height: 200px;
+}
+
+input[type=button] {
+    height: 65px;
+    width: 500px;
+    background-image: linear-gradient(#3f5fde, #0515f2);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 253, 253);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 23px;
+    text-transform: uppercase;
+    font-style: bold;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+}
+
+input[type=submit]:hover {
+    background-image: linear-gradient(#0084ff, #2f366f);
+    transition: all 0.4s ease 0s;
+}
+
+.popup{
+    width: 400px;
+    background: #3f3d3d;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: translate(-50%, -50%) scale(1);
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: #0e7ac7;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
