@@ -12,14 +12,13 @@ main {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     background: #2c2b2b;
     box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
   }
   
   /* Handle */
@@ -52,16 +51,16 @@ bottomsection {
 }
 
 .blue {
-    background-color: rgb(84, 84, 180);
+    background-color: rgb(56, 56, 170);
 }
 
 .pink {
-    background-color: rgb(217, 132, 146);
+    background-color: rgb(197, 122, 135);
     padding: 200px;
 }
 
 .yellow {
-    background-color: rgb(99, 99, 6);
+    background-color: rgb(117, 117, 55);
     padding: 200px;
 }
 
@@ -104,7 +103,7 @@ bottomsection {
 }
 
 .anotherwave .shape-fill {
-    fill: rgb(217, 132, 146);
+    fill:  rgb(197, 122, 135);
 }
 
 .wave {
@@ -141,9 +140,8 @@ h1 {
 
 h2 {
     font-size: 45px;
-    ;
-    text-shadow: 0px 5px 0px rgb(124, 115, 115);
-
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -153,7 +151,6 @@ work button {
     padding: 0;
     background: lightslategray;
     color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -171,22 +168,42 @@ work .button__icon {
     }
 }
 
-work button:hover {
+work .dyce button:hover {
     position: relative;
-    height: 260px;
+    height: 280px;
     width: 200px;
-    background-color: rgb(142, 130, 130);
+    background-color: rgb(116, 100, 100);
     transition: 1s;
-
 }
 
-work button:hover::after {
-    content: "I'm Dyce, the best management and moderation bot you could find for your server.";
+work .dyce button:hover::after {
+    content: "\"I'm Dyce, the best management and moderation bot you could find for your server.\"";
     color: rgb(255, 255, 255);
     text-shadow: 50px;
     position: absolute;
     bottom: 0;
-    background: rgb(48, 114, 105);
+    border-radius: 10px;
+}
+
+work .hades_kitten button {
+    justify-content: right;
+    align-items: right;
+}
+
+work .hades_kitten button:hover {
+    position: relative;
+    height: 280px;
+    width: 200px;
+    background-image: linear-gradient(#932892, #a3aa4a, #60739d);
+    transition: 1s;
+}
+
+work .hades_kitten button:hover::after {
+    content: "A Discord bot project I did with my friend known as \"Iris\".";
+    color: rgb(255, 255, 255);
+    text-shadow: 50px;
+    position: absolute;
+    bottom: 0;
     border-radius: 10px;
 }
 
@@ -196,7 +213,7 @@ nav {
     line-height: 75px;
     padding: 0px 100px;
     position: fixed;
-    background-image: linear-gradient(#4b477d, #0180fe);
+    background-image: linear-gradient(#16152a, #21272d);
     z-index: 10;
 }
 
@@ -207,7 +224,7 @@ nav .logo p {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     cursor: pointer;
-    color: white
+    color: rgb(255, 255, 255)
 }
 
 nav ul {
@@ -233,7 +250,7 @@ nav li a:hover {
 }
 
 footer {
-    background-image: linear-gradient(#0e7ac7, rgb(3, 7, 122));
+    background-color: linear-gradient(#16152a, #21272d);
 }
 
 .socialicons {

@@ -35,22 +35,3 @@ async function handleFormSubmit() {
         console.error(e)            
     }
 }
-
-let typed;
-
-typed = new Typed(".arnav", {
-    strings: ["Arnav"],
-    typeSpeed: 250,
-    backSpeed: 500,
-    loop: true,
-})
-
-typed = new Typed(".services", {
-    strings: ["Services"],
-    typeSpeed: 250,
-})
-
-typed = new Typed(".work", {
-    strings: ["Work"],
-    typeSpeed: 250,
-})
