@@ -144,14 +144,13 @@ h2 {
     text-align: center;
 }
 
-
-work button {
+projects button {
     display: inline-flex;
     height: 200px;
     padding: 0;
     background: lightslategray;
     color: white;
-    border-radius: 5px;
+    border-radius: 12px;
     border: none;
     outline: none;
     font-size: 16px;
@@ -161,14 +160,14 @@ work button {
     transition: 1s;
 }
 
-work .button__icon {
+projects .button__icon {
     img {
         height: 200px;
         width: 200px
     }
 }
 
-work .dyce button:hover {
+projects .dyce button:hover {
     position: relative;
     height: 280px;
     width: 200px;
@@ -176,7 +175,7 @@ work .dyce button:hover {
     transition: 1s;
 }
 
-work .dyce button:hover::after {
+projects .dyce button:hover::after {
     content: "\"I'm Dyce, the best management and moderation bot you could find for your server.\"";
     color: rgb(255, 255, 255);
     text-shadow: 50px;
@@ -185,12 +184,11 @@ work .dyce button:hover::after {
     border-radius: 10px;
 }
 
-work .hades_kitten button {
-    justify-content: right;
-    align-items: right;
+projects .hades_kitten button {
+    margin-left: 30%;
 }
 
-work .hades_kitten button:hover {
+projects .hades_kitten button:hover {
     position: relative;
     height: 280px;
     width: 200px;
@@ -198,7 +196,7 @@ work .hades_kitten button:hover {
     transition: 1s;
 }
 
-work .hades_kitten button:hover::after {
+projects .hades_kitten button:hover::after {
     content: "A Discord bot project I did with my friend known as \"Iris\".";
     color: rgb(255, 255, 255);
     text-shadow: 50px;
@@ -239,7 +237,7 @@ nav li {
 nav li a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
-    padding: 0px 10px;
+    margin: 0px 10px;
     color: white;
     text-decoration: none;
 }
