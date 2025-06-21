@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: fetch('config.json')
+                    .then(response => response.json())
+                    .then(config => {
+                        config.public_key
+                    })
+            });
+        })();
+    </script>
+    <script src="index.js"></script>
 </head>
 
 </html>
 
 <body>
     <nav>
-        <div class="logo">
-            <p>Arnav</p>
-        </div>
         <ul>
-            <li><a href="#header">Home</a></li>
+            <li class="logo"><a href="#home">Arnav</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -28,16 +38,16 @@
 
     <br><br><br>
     <main>
-        <div id="header">
+        <div id="home">
             <section class="blue">
                 <br>
-                <p>Welcome to my website! I'm a freelancer, I currently know the following programming Languages:</p>
+                <p>Hi, and thanks for visiting my website! I'm a 15-year-old aspiring programmer from Delhi, India.</p>
+                <p>I specialize in:</p>
                 <ul>
-                    <li>
-                        <p>Javascript
-                    </li>
-                    <li>Typescript</p>
-                    </li>
+                    <li><strong>Back-end JavaScript</strong> — I’ve been working with Discord bots since 2020 using
+                        Node.js.</li>
+                    <li><strong>Beginner TypeScript</strong> — I started learning TypeScript in mid-2024 and I'm
+                        actively expanding my skills.</li>
                 </ul>
                 <div class="bottomwave">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -55,14 +65,20 @@
             <section>
                 <h2>Services</h2>
 
-                <p>I'm a teen freelancer. I have a passion in Computer Science and software engineering. I build
-                    Applications on
-                    a platform called Discord.</p>
+                <p>As a Freelancer, I like to do commissions and develop Applications on Discord with prices ranging
+                    from 5 to 25 US$ depending on the type of bot being build and if it should be online 24/7.
+                    <br><br>
+                <ul>
+                    <li>Discord Moderation/Management Bots - 7.4 US$</li>
+                    <li>Discord Economy Bots - 9 US$</li>
+                    <li>Uncatogorized Bots - TBD</li>
+                </ul>
+                </p>
             </section>
         </div>
 
         <br>
-        <div id="work">
+        <div id="projects">
             <section class="pink">
                 <projects>
                     <h2>Projects</h2>
@@ -70,9 +86,15 @@
                         <tr>
                             <td>
                                 <div class="dyce">
-                                    <button type="button" ,
+                                    <button type="button"
                                         onclick="window.open('https://github.com/ArnavDevelops/Dyce', '_blank')">
-                                        <span class="button__icon"><img src="images/dicePixel.png"></span>
+                                        <span class="button__icon">
+                                            <img src="images/dicePixel.png" alt="Dyce">
+                                        </span>
+                                        <div class="hover-text">
+                                            "I'm Dyce, the best management and moderation bot you could find for your
+                                            server."
+                                        </div>
                                     </button>
                                 </div>
                             </td>
@@ -80,7 +102,11 @@
                                 <div class="hades_kitten">
                                     <button type="button" ,
                                         onclick="window.open('https://github.com/Hades-Kitten/Hades-Kitten', '_blank')">
-                                        <span class="button__icon"><img src="images/hadeskitten4.png"></span>
+                                        <span class="button__icon"><img src="images/hadeskitten4.png"
+                                                alt="Hade's Kitten"></span>
+                                        <div class="hover-text">
+                                            "An Application built by me and my Friend using the Nationstates API"
+                                        </div>
                                     </button>
                                 </div>
                             </td>
@@ -101,21 +127,22 @@
     </main>
 
     <div id="contact">
-        <bottomsection class="yellow">
+        <bottomsection class="green">
             <div class="contact">
                 <div class="containerleft">
-                    <h>You can contact me through</h><br><br><br>
+                    <h2>Contacts</h2>
+                    <br><br><br>
                     <a class="fa-brands fa-discord"></a><i>arnav1001yt</i><br>
                     <a class="fa-brands fa-google"></a><i>arnavfreelancebusiness@gmail.com</i>
                 </div>
                 <div class="containerright">
                     <iframe style="display: none;" name="sus"> </iframe>
-                    <form id="gform" , method="POST" , action, target="sus">
+                    <form id="gform" , method="POST" , action="" , target="sus">
                         <input type="text" id="name" name="Name" placeholder="Your name.." , required>
+                        <input type="text" id="email" name="Email" placeholder="Your Email..", required>
+                        <input type="text" id="subject" name="Subject" placeholder="Subject.." , required>
 
-                        <input type="text" id="head" name="Subject" placeholder="Subject.." , required>
-
-                        <textarea id="subject" name="subject" placeholder="Write something.." , required></textarea>
+                        <textarea id="message" name="Message" placeholder="Write something.." , required></textarea>
                         <input type="button" id="submitbtn" value="Submit" , onclick="handleFormSubmit()">
 
                     </form>

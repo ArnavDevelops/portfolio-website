@@ -13,33 +13,35 @@ main {
 
 ::-webkit-scrollbar {
     width: 7px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #2c2b2b;
     box-shadow: inset 0 0 5px grey;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #5f5c5c;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #676363;
     border-radius: 10px;
     transition: 0.5s;
-  }
+}
 
 section {
     position: relative;
     display: flex;
     flex-direction: column;
     min-height: 460px;
-    padding: 100px, 20vw;
     align-items: center;
+    margin: 0 auto;
+    padding: 80px, 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 bottomsection {
@@ -51,7 +53,8 @@ bottomsection {
 }
 
 .blue {
-    background-color: rgb(56, 56, 170);
+    background-color: #1f445f;
+    padding: 1px;
 }
 
 .pink {
@@ -59,8 +62,8 @@ bottomsection {
     padding: 200px;
 }
 
-.yellow {
-    background-color: rgb(117, 117, 55);
+.green {
+    background-color: rgb(32, 80, 35);
     padding: 200px;
 }
 
@@ -103,7 +106,7 @@ bottomsection {
 }
 
 .anotherwave .shape-fill {
-    fill:  rgb(197, 122, 135);
+    fill: rgb(197, 122, 135);
 }
 
 .wave {
@@ -131,79 +134,92 @@ bottomsection {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-size: 1.1erm;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    margin: 10px, 0;
+    line-height: 1.6;
+    font-size: 1.1erm;
 }
 
 h1 {
     text-align: center;
+    font-size: 2.5erm;
+    font-weight: 700px;
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 45px;
+    font-size: 2.5rem;
+    font-weight: 700px;
+    margin-bottom: 10px;
     justify-content: center;
     text-align: center;
 }
 
+.blue ul li {
+    margin-bottom: 15px;
+    font-size: 1.05erm;
+}
+
+.blue ul li strong {
+    color: #a9c1ff;
+}
+
 projects button {
-    display: inline-flex;
-    height: 200px;
-    padding: 0;
-    background: lightslategray;
-    color: white;
+    position: relative;
+    width: 150px;
+    height: 150px;
     border-radius: 12px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: transparent;
     border: none;
-    outline: none;
-    font-size: 16px;
-    font-weight: 500;
+    padding: 0;
     cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 1s;
 }
 
-projects .button__icon {
-    img {
-        height: 200px;
-        width: 200px
-    }
+projects button:hover {
+    transform: scale(1.05);
 }
 
-projects .dyce button:hover {
-    position: relative;
-    height: 280px;
-    width: 200px;
-    background-color: rgb(116, 100, 100);
-    transition: 1s;
+projects .button__icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-projects .dyce button:hover::after {
-    content: "\"I'm Dyce, the best management and moderation bot you could find for your server.\"";
-    color: rgb(255, 255, 255);
-    text-shadow: 50px;
+projects .dyce .hover-text,
+.hades_kitten .hover-text {
     position: absolute;
     bottom: 0;
-    border-radius: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px;
+    font-size: 0.85rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
 }
 
-projects .hades_kitten button {
-    margin-left: 30%;
+projects .dyce button:hover .hover-text,
+.hades_kitten button:hover .hover-text {
+    transform: translateY(0%);
+    opacity: 1;
 }
 
-projects .hades_kitten button:hover {
-    position: relative;
-    height: 280px;
-    width: 200px;
-    background-image: linear-gradient(#932892, #a3aa4a, #60739d);
-    transition: 1s;
-}
-
-projects .hades_kitten button:hover::after {
-    content: "A Discord bot project I did with my friend known as \"Iris\".";
-    color: rgb(255, 255, 255);
-    text-shadow: 50px;
-    position: absolute;
-    bottom: 0;
-    border-radius: 10px;
-}
 
 nav {
     width: 100%;
@@ -215,7 +231,7 @@ nav {
     z-index: 10;
 }
 
-nav .logo p {
+nav ul .logo {
     font-size: 30px;
     font-weight: bold;
     float: left;
@@ -226,25 +242,45 @@ nav .logo p {
 }
 
 nav ul {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-nav li {
+nav ul li {
     display: inline-block;
-    list-style: none;
+}
+
+nav ul li.logo {
+    margin-right: auto;
 }
 
 nav li a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     margin: 0px 10px;
+    padding: 10px;
     color: white;
     text-decoration: none;
+    position: relative;
 }
 
-nav li a:hover {
-    color: gray;
-    transition: all 0.4s ease 0s;
+nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(107, 107, 208);
+    transition: width 0.3s ease;
+}
+
+nav li a:hover::after {
+    width: 100%;
 }
 
 footer {
@@ -338,14 +374,14 @@ textarea {
     resize: vertical;
 }
 
-textarea[id="subject"] {
+textarea[id="message"] {
     height: 200px;
 }
 
 input[type=button] {
     height: 65px;
     width: 500px;
-    background-image: linear-gradient(#3f5fde, #0515f2);
+    background-image: linear-gradient(#16152a, #21272d);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(255, 253, 253);
     padding: 12px 20px;
@@ -359,12 +395,13 @@ input[type=button] {
     transition: all 0.4s ease 0s;
 }
 
-input[type=submit]:hover {
-    background-image: linear-gradient(#0084ff, #2f366f);
-    transition: all 0.4s ease 0s;
+input[type=button]:hover {
+    padding: 10px;
+    font-size: 2rem;
+    transition: 1s
 }
 
-.popup{
+.popup {
     width: 400px;
     background: #3f3d3d;
     border-radius: 6px;
@@ -378,24 +415,24 @@ input[type=submit]:hover {
     transition: translate(-50%, -50%) scale(1);
 }
 
-.open-popup{
+.open-popup {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup img{
+.popup img {
     width: 100px;
     margin-top: -50px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popup h2{
+.popup h2 {
     margin: 30px 0 10px;
 }
 
-.popup button{
+.popup button {
     width: 100%;
     margin-top: 50px;
     padding: 10px 0;

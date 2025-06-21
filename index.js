@@ -20,11 +20,12 @@ fetch('config.json')
 
 async function handleFormSubmit() {
     try {
-        const email = document.getElementById("name").value;
+        const name = document.getElementById("name").value;
         const subject = document.getElementById("head").value;
         const message = document.getElementById("subject").value;
+        const email = document.getElementById("email").value;
 
-        if (!email || !subject || !message) {
+        if (!name || !subject || !message || !email) {
             alert("Please fill in all fields");
             return;
         }
@@ -34,4 +35,15 @@ async function handleFormSubmit() {
     } catch (e) {
         console.error(e)            
     }
+}
+
+function sendMail() {
+    let parms = {
+        email: document.getElementById("name").value,
+        subject: document.getElementById("head").value,
+        message: document.getElementById("subject").value,
+        email: document.getElementById("email").value
+    }
+
+    emailjs.send("service_cgeudgk", "template_8cq9nnh", parms).then(alert("Email has been sent."))
 }
