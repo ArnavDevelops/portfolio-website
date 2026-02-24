@@ -1,233 +1,63 @@
-body,
-main {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(21, 20, 20);
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: bold;
-    margin: auto;
-    font-size: 19px, 19%;
-    overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-    width: 7px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #2c2b2b;
-    box-shadow: inset 0 0 5px grey;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #5f5c5c;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #676363;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 460px;
-    align-items: center;
-    margin: 0 auto;
-    padding: 80px, 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-bottomsection {
-    position: relative;
-    display: flex;
-    min-height: 460px;
-    padding: 100px, 20vw;
-    align-items: center;
-}
-
-.blue {
-    background-color: #1f445f;
-    padding: 1px;
-}
-
-.pink {
-    background-color: rgb(197, 122, 135);
-    padding: 200px;
-}
-
-.green {
-    background-color: rgb(32, 80, 35);
-    padding: 200px;
-}
-
-.bottomwave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.bottomwave svg {
-    position: relative;
-    display: block;
-    width: calc(133% + 1.3px);
-    height: 207px;
-}
-
-.bottomwave .shape-fill {
-    fill: rgb(21, 20, 20);
-}
-
-.anotherwave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.anotherwave svg {
-    position: relative;
-    display: block;
-    width: calc(127% + 1.3px);
-    height: 221px;
-    transform: rotateY(180deg);
-}
-
-.anotherwave .shape-fill {
-    fill: rgb(197, 122, 135);
-}
-
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(127% + 1.3px);
-    height: 221px;
-    transform: rotateY(180deg);
-}
-
-.wave .shape-fill {
-    fill: rgb(21, 20, 20);
-}
-
+/* ===== RESET ===== */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-size: 1.1erm;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-p {
-    margin: 10px, 0;
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f111a;
+    color: white;
     line-height: 1.6;
-    font-size: 1.1erm;
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.5erm;
-    font-weight: 700px;
-    margin-bottom: 10px;
+    font-size: clamp(14px, 1.2vw, 18px);
 }
 
 h2 {
-    font-size: 2.5rem;
-    font-weight: 700px;
-    margin-bottom: 10px;
-    justify-content: center;
-    text-align: center;
+    font-size: clamp(30px, 5vw, 50px);
 }
 
-.blue ul li {
-    margin-bottom: 15px;
-    font-size: 1.05erm;
+a {
+    color: cadetblue;
 }
 
-.blue ul li strong {
-    color: #a9c1ff;
+
+ul {
+    font-size: clamp(14px, 1vw, 18px);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-projects button {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 12px;
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top;
-    margin: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+li {
+    padding: 4px;
 }
 
-projects button:hover {
-    transform: scale(1.05);
+/* ===== SECTIONS ===== */
+section {
+    padding: 4rem 2rem;
 }
 
-projects .button__icon img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-projects .dyce .hover-text,
-.hades_kitten .hover-text {
+section::before {
+    content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 10px;
-    font-size: 0.85rem;
-    transform: translateY(100%);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    pointer-events: none;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
 }
 
-projects .dyce button:hover .hover-text,
-.hades_kitten button:hover .hover-text {
-    transform: translateY(0%);
-    opacity: 1;
+section > * {
+    position: relative;
+    z-index: 1;
 }
 
-
+/* ===== NAV ===== */
 nav {
     width: 100%;
     height: 75px;
     line-height: 75px;
     padding: 0px 100px;
     position: fixed;
-    background-image: linear-gradient(#16152a, #21272d);
+    background-color: #000000;
     z-index: 10;
 }
 
@@ -275,7 +105,7 @@ nav li a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: rgb(107, 107, 208);
+    background-color: rgb(255, 255, 255);
     transition: width 0.3s ease;
 }
 
@@ -283,16 +113,261 @@ nav li a:hover::after {
     width: 100%;
 }
 
-footer {
-    background-color: linear-gradient(#16152a, #21272d);
+/* ===== MORE BUTTON ===== */
+more button {
+    width: clamp(120px, 240px, 600px);
+    height: clamp(40px, 80px, 200px);
+    font-size: clamp(20px, 20px, 50px);
+    margin: 20px;
+    margin-top: 40px;
+    color: white;
+    transition: transform 0.3s ease;
+    background: transparent;
+    border-color: white;
+    border-width: 3px;
+    cursor: pointer;
 }
 
-.socialicons {
+more button:hover {
+    transform: scale(1.03);
+}
+
+/* ===== ABOUT ME ===== */
+#home {
+    background-image: url("/images/collage.png");
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    padding: 6rem 4rem;
+    padding-right: 55%;
+
+    color: white;
+}
+
+/* ===== SERVICES ===== */
+#services {
+    background-image: url("/images/htop_server.png");
+    background-size: cover;
+    backdrop-filter: blur(1px);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 100vh;
+    padding: 6rem 4rem;
+
+    color: white;
+}
+
+#services > * {
+    grid-column: 3;
+}
+
+/* Limit paragraph width */
+#services p,
+#services ul {
+    max-width: 600px;
+}
+
+/* ===== FEATURED PROJECTS ===== */
+#featured {
+    background-image: url("/images/vscode_client.png");
+    background-size: cover;
+    backdrop-filter: blur(1px);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 100vh;
+    padding: 6rem 4rem;
+
+    color: white;
+}
+
+#featured > * {
+    grid-column: 1;
+}
+
+#featured .projects-grid button {
+    position: relative;
+    width: clamp(180px, 25vw, 320px);
+    height: clamp(180px, 25vw, 320px);
+    border: none;
+
+    overflow: hidden;
+    vertical-align: top;
+
+    transition: transform 0.3s ease;
+
+    margin: 10px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#featured .projects-grid .project-icon {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+#featured .projects-grid button:hover {
+    transform: scale(1.05);
+}
+
+#featured .projects-grid .hover-text {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 1.5rem;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+
+    font-size: clamp(14px, 0.9vw, 18px);
+    line-height: 1.4;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+#featured .projects-grid button:hover .hover-text {
+    opacity: 1;
+}
+
+#featured .projects-grid button:hover .project-icon {
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+    background-image: url("/images/nasa.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 4rem;
+    color: white;
+}
+
+#contact > * {
+    position: relative;
+    z-index: 1;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+#contact .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* vertically center */
+    gap: 6rem;
+    width: 100%;
+}
+
+#contact .contact-info {
+    flex: 1;
+    font-size: clamp(16px, 1.2vw, 20px);
+}
+
+#contact .contact-form {
+    flex: 1.3;
+    width: 100%;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 16px;
+
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    backdrop-filter: blur(8px);
+}
+
+#contact .contact-form input {
+    height: auto;
+}
+
+#contact .contact-form input::placeholder,
+#contact .contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+#contact .contact-form textarea {
+    height: clamp(100px, 200px, 400px);
+}
+
+#contact .contact-form button {
+    width: 100%;
+    max-width: 100vw;
+    height: 50px;
+    letter-spacing: 2px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#contact .contact-form button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.02);
+}
+
+#contact .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.3s ease;
+    visibility: hidden;
+}
+
+/* ===== FOOTER ===== */
+#footer {
+    background-color: #000000;
     display: flex;
     justify-content: center;
 }
 
-.socialicons a {
+#footer a {
     text-decoration: none;
     padding: 10px;
     background-color: white;
@@ -300,147 +375,8 @@ footer {
     border-radius: 50%;
 }
 
-.socialicons a i {
+#footer a i {
     font-size: 2em;
     color: black;
     opacity: 0.9;
-}
-
-.contact {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background: none;
-}
-
-.containerleft {
-    text-align: left;
-    justify-content: left;
-    position: relative;
-    font-size: 15p;
-    max-width: 500px;
-    background: none;
-}
-
-.containerleft h {
-    text-align: left;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: bold;
-    font-size: 30px;
-    flex-basis: 36%;
-    background: none;
-    color: white
-}
-
-.containerleft a {
-    text-decoration: none;
-    padding: 10px;
-    color: rgb(141, 136, 100);
-    margin: 5px;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    padding-right: 20px;
-}
-
-.containerleft i {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: bold;
-    color: white;
-
-}
-
-.containerright {
-    border-radius: 5px;
-    position: relative;
-    padding-right: 15px;
-    padding-left: 15px;
-    flex-basis: 10%;
-    background: none;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-    width: 500px;
-    max-height: 550px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 12px;
-    border: 2px solid #676767;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    resize: vertical;
-}
-
-textarea[id="message"] {
-    height: 200px;
-}
-
-input[type=button] {
-    height: 65px;
-    width: 500px;
-    background-image: linear-gradient(#16152a, #21272d);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(255, 253, 253);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 23px;
-    text-transform: uppercase;
-    font-style: bold;
-    text-align: center;
-    transition: all 0.4s ease 0s;
-}
-
-input[type=button]:hover {
-    padding: 10px;
-    font-size: 2rem;
-    transition: 1s
-}
-
-.popup {
-    width: 400px;
-    background: #3f3d3d;
-    border-radius: 6px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    visibility: hidden;
-    transition: translate(-50%, -50%) scale(1);
-}
-
-.open-popup {
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.popup img {
-    width: 100px;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.popup h2 {
-    margin: 30px 0 10px;
-}
-
-.popup button {
-    width: 100%;
-    margin-top: 50px;
-    padding: 10px 0;
-    background-color: #0e7ac7;
-    color: white;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
