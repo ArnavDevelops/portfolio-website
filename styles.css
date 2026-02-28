@@ -134,7 +134,7 @@ more button:hover {
 
 /* ===== ABOUT ME ===== */
 #home {
-    background-image: url("/images/collage.png");
+    background-image: url("./images/collage.png");
     background-size: cover;
     background-position: 50% center;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@ more button:hover {
 
 /* ===== SERVICES ===== */
 #services {
-    background-image: url("/images/htop_server.png");
+    background-image: url("./images/htop_server.png");
     background-size: cover;
     backdrop-filter: blur(1px);
     background-position: 50% center;
@@ -175,7 +175,7 @@ more button:hover {
 
 /* ===== FEATURED PROJECTS ===== */
 #featured {
-    background-image: url("/images/vscode_client.png");
+    background-image: url("./images/vscode_client.png");
     background-size: cover;
     backdrop-filter: blur(1px);
     background-position: 50% center;
@@ -264,7 +264,7 @@ more button:hover {
 
 /* ===== CONTACT ===== */
 #contact {
-    background-image: url("/images/nasa.png");
+    background-image: url("./images/nasa.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
